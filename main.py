@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter.font import *
 from tkinter.ttk import *
 from search import *
+from map import *
 
 frameHeight = 580
 WIDTH = 960
@@ -28,8 +29,9 @@ class MainGUI:
                              command=SearchFrame.search)
         self.button.place(x=350, y=100)
 
-        self.mapFrame = Frame(self.window, width=WIDTH / 2 - 60, height=frameHeight - 50, bg='magenta')
-        self.mapFrame.place(x=450, y=100)
+        self.mapFrame = Frame(self.window, width=WIDTH / 2 - 60, height=frameHeight - 80, bg='magenta')
+        self.mapFrame.place(x=450, y=130)
+        MapFrame(self.mapFrame)
 
         self.funcFrame = Frame(self.window, width=70, height=frameHeight - 50, bg='cyan')
         self.funcFrame.place(x=880, y=100)
