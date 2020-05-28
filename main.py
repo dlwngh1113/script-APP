@@ -19,9 +19,14 @@ class MainGUI:
         nameTag = Label(self.window, text='APP', font=APP, width=4)
         nameTag.grid(row=0, column=0, sticky='w')
 
-        self.searchFrame = Frame(self.window, width=WIDTH / 2 - 30, height=frameHeight, bg='lightgray')
+        self.searchFrame = Frame(self.window, width=WIDTH / 2 - 30, height=frameHeight, bg='light gray')
         self.searchFrame.grid(row=1, column=0)
         SearchFrame(self.searchFrame)
+
+        self.buttonFont = Font(family='italic', weight='bold', slant='roman', size=30)
+        self.button = Button(self.window, text='검색', width=4, height=1, relief='raised', bd=4, font=self.buttonFont,
+                             command=SearchFrame.search)
+        self.button.place(x=300, y=100)
 
         self.mapFrame = Frame(self.window, width=WIDTH / 2 - 60, height=frameHeight, bg='magenta')
         self.mapFrame.grid(row=1, column=1)
