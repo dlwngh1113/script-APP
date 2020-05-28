@@ -23,6 +23,9 @@ class SearchFrame:
         cityCombo.place(x=100, y=85)
         cityCombo.set('목록 선택')
 
+        resultLabel = Label(frame, text='학원 및 교습소 명', font=self.font)
+        resultLabel.place(x=30, y=150)
+
     def search(self):
         pass
 

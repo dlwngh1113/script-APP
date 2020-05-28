@@ -34,6 +34,9 @@ class MainGUI:
         self.funcFrame = Frame(self.window, width=90, height=frameHeight, bg='cyan')
         self.funcFrame.grid(row=1, column=2)
 
+        self.resultFrame = Frame(self.window, width=WIDTH / 2 - 50, height=frameHeight / 2 + 60, bg='green')
+        self.resultFrame.place(x=10, y=280)
+
         self.window.mainloop()
         pass
 
