@@ -19,8 +19,8 @@ class MainGUI:
         nameTag = Label(self.window, text='APP', font=APP, width=4)
         nameTag.grid(row=0, column=0, sticky='w')
 
-        self.searchFrame = Frame(self.window, width=WIDTH / 2 - 30, height=frameHeight, bg='light gray')
-        self.searchFrame.grid(row=1, column=0)
+        self.searchFrame = Frame(self.window, width=WIDTH, height=frameHeight, bg='light gray')
+        self.searchFrame.place(x=0, y=60)
         SearchFrame(self.searchFrame)
 
         self.buttonFont = Font(family='italic', weight='bold', slant='roman', size=30)
@@ -28,11 +28,11 @@ class MainGUI:
                              command=SearchFrame.search)
         self.button.place(x=300, y=100)
 
-        self.mapFrame = Frame(self.window, width=WIDTH / 2 - 60, height=frameHeight, bg='magenta')
-        self.mapFrame.grid(row=1, column=1)
+        self.mapFrame = Frame(self.window, width=WIDTH / 2 - 60, height=frameHeight - 50, bg='magenta')
+        self.mapFrame.place(x=450, y=100)
 
-        self.funcFrame = Frame(self.window, width=90, height=frameHeight, bg='cyan')
-        self.funcFrame.grid(row=1, column=2)
+        self.funcFrame = Frame(self.window, width=70, height=frameHeight - 50, bg='cyan')
+        self.funcFrame.place(x=880, y=100)
 
         self.resultFrame = Frame(self.window, width=WIDTH / 2 - 50, height=frameHeight / 2 + 60, bg='green')
         self.resultFrame.place(x=10, y=280)
