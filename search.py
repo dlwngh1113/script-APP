@@ -38,5 +38,3 @@ class SearchFrame:
 
     def search(self):
         pass
-
-
