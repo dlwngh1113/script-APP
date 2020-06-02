@@ -31,7 +31,7 @@ class SearchFrame:
 
         #검색 버튼 생성, 위치 지정
         Button(frame, text='검색', width=4, height=1, relief='raised', bd=4, font=self.Labelfont,
-                             command=SearchFrame.search).place(x=350, y=50)
+                             command=self.search).place(x=350, y=50)
 
         #라벨 생성, 위치 지정
         Label(frame, text='학원 및 교습소 명', font=self.Labelfont).place(x=15, y=160)

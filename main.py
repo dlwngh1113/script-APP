@@ -16,7 +16,7 @@ class MainGUI:
         self.window.geometry(str(WIDTH) + 'x' + str(HEIGHT))
         self.window.resizable(False, False)
 
-        #왼쪽 상단 APP글자 띄우기
+        #왼쪽 상단 APP글자
         APP = Font(family='bauhaus 93', size=40, slant='italic')
         nameTag = Label(self.window, text='APP', font=APP, width=4)
         nameTag.grid(row=0, column=0, sticky='w')
