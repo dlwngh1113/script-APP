@@ -41,7 +41,7 @@ class MapFrame:
         request = urllib.request.Request(url_query)
         request.add_header('X-Naver_Client-Id', client_id)
         request.add_header('X-Naver_Client-Secret', client_secret)'''
-        #지도 url열기
+        # 지도 url 열기
         url = 'https://search.naver.com/search.naver'
         option = '?sm=top_hty&fbm=1&ie=utf8&'
         query = 'query=' + urllib.parse.quote(self.mapEntry.get())
