@@ -9,7 +9,7 @@ class SearchFrame:
         self.Combofont = Font(family='italic', weight='bold', slant='roman', size=14)
         self.Labelfont = Font(family='italic', weight='bold', slant='roman', size=20)
 
-        #시/군 라벨 생성, 위치 지정
+        # 시/군 라벨 생성, 위치 지정
         cityLabel = Label(frame, text='시/군', font=self.Labelfont)
         cityLabel.place(x=15, y=25)
         values = [str(i) for i in range(10)]
@@ -19,7 +19,7 @@ class SearchFrame:
         frame.option_add('*TCombobox*Listbox.font', self.Combofont)
         cityCombo.set('목록 선택')
 
-        #업종 라벨 생성, 위치 지정
+        # 업종 라벨 생성, 위치 지정
         jobLabel = Label(frame, text='업종', font=self.Labelfont)
         jobLabel.place(x=15, y=80)
         values = [str(i) for i in range(10)]
@@ -29,11 +29,11 @@ class SearchFrame:
         frame.option_add('*TCombobox*Listbox.font', self.Combofont)
         cityCombo.set('목록 선택')
 
-        #검색 버튼 생성, 위치 지정
+        # 검색 버튼 생성, 위치 지정
         Button(frame, text='검색', width=4, height=1, relief='raised', bd=4, font=self.Labelfont,
                              command=self.search).place(x=350, y=50)
 
-        #라벨 생성, 위치 지정
+        # 라벨 생성, 위치 지정
         Label(frame, text='학원 및 교습소 명', font=self.Labelfont).place(x=15, y=160)
 
     def search(self):

@@ -32,7 +32,7 @@ class MapFrame:
         self.mapButton.place(x=100, y=25)
 
     def connectMap(self):
-        #url과 검색 옵션 설정
+        # url과 검색 옵션 설정
         '''url = 'https://openapi.naver.com/v1/search/local.xml'
         option = '&display=3&sort=count'
         query = 'query=' + urllib.parse.quote(self.mapEntry.get())
