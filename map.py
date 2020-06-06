@@ -2,9 +2,9 @@ from xml import *
 from tkinter import *
 from tkinter.font import *
 import tkinter.ttk
-#api에 사용할 모듈
+# api에 사용할 모듈
 import urllib.request
-#웹 브라우저 열기에 사용할 모듈
+# 웹 브라우저 열기에 사용할 모듈
 import webbrowser
 
 client_id = '3rzrKUftiMZU0SeyQ2ED'
