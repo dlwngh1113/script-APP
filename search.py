@@ -52,12 +52,30 @@ class SearchFrame:
         params = '&SIGUN_NM=' + SIGUN_NM + '&INDUTYPE_DIV_NM=' + INDUTYPE
         open_url = url + open_api_key + params
 
+        '''1       SIGUN_NM        시군명
+            2        SIGUN_CD        시군코드
+            3        EMD_NM        구 / 읍면동명
+            4        INDUTYPE_DIV_NM        업종구분명
+            5        FACLT_NM        시설명
+            6        REPRSNTV_NM        대표자명
+            7        CRSE_CLASS_NM        교습과정명
+            8        TELNO        전화번호
+            9        REFINE_ZIP_CD        소재지우편번호
+            10        REFINE_LOTNO_ADDR        소재지지번주소
+            11        REFINE_ROADNM_ADDR        소재지도로명주소
+            12        REFINE_WGS84_LAT        WGS84위도
+            13       REFINE_WGS84_LOGT       WGS84경도'''
+
         req = requests.get(open_url)
         html = req.text
 
         soup = BeautifulSoup(html, 'html.parser')
-        values = soup.find_all('faclt_nm')
+        academies = soup.find_all('faclt_nm')
+        telephones = soup.find_all('telno')
 
-        valueList = [x.text for x in values]
-        for x in range(len(valueList)):
-            self.academyListBox.insert(x, valueList[x])
+        academyList = [x.text for x in academies]
+        phoneList = [x.text for x in telephones]
+        for x in range(len(academyList)):
+            academy = academyList[x]
+            phone = phoneList[x]
+            self.academyListBox.insert(x, academy + '  ' + phone)
