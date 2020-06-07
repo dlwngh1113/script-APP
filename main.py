@@ -36,8 +36,8 @@ class MainGUI:
         self.funcFrame.place(x=880, y=100)
 
         # 나중에 지워줘야 하는 프레임(검색 프레임에 합쳐야함)
-        self.resultFrame = Frame(self.window, width=WIDTH / 2 - 50, height=frameHeight / 2 + 60, bg='green')
-        self.resultFrame.place(x=10, y=280)
+        #self.resultFrame = Frame(self.window, width=WIDTH / 2 - 50, height=frameHeight / 2 + 60, bg='green')
+        #self.resultFrame.place(x=10, y=280)
 
         self.window.mainloop()
         pass

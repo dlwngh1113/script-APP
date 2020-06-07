@@ -10,6 +10,7 @@ cityDong = [x.findtext("EMD_NM") for x in row]
 print(cityName)
 print(cityDong)'''
 
+'''
 import requests
 from bs4 import BeautifulSoup
 import urllib
@@ -25,4 +26,4 @@ html = req.text
 
 soup = BeautifulSoup(html, 'html.parser')
 values = soup.find_all('faclt_nm')
-print([x.text for x in values][:5])
+print([x.text for x in values][:5])'''
