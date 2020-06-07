@@ -29,18 +29,9 @@ class MapFrame:
     def initButton(self, frame):
         self.mapButton = Button(frame, text='열기', width=4, height=1, relief='raised',
                                 font=Font(family='italic', size=15, weight='bold'), command=self.connectMap)
-        self.mapButton.place(x=100, y=25)
+        self.mapButton.place(x=350, y=25)
 
     def connectMap(self):
-        # url과 검색 옵션 설정
-        '''url = 'https://openapi.naver.com/v1/search/local.xml'
-        option = '&display=3&sort=count'
-        query = 'query=' + urllib.parse.quote(self.mapEntry.get())
-        url_query = url + query + option
-
-        request = urllib.request.Request(url_query)
-        request.add_header('X-Naver_Client-Id', client_id)
-        request.add_header('X-Naver_Client-Secret', client_secret)'''
         # 지도 url 열기
         url = 'https://search.naver.com/search.naver'
         option = '?sm=top_hty&fbm=1&ie=utf8&'
