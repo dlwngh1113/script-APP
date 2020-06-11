@@ -3,6 +3,7 @@ from tkinter.font import *
 from tkinter.ttk import *
 from search import *
 from map import *
+from mail import *
 
 frameHeight = 580
 WIDTH = 960
@@ -34,6 +35,7 @@ class MainGUI:
         # 오른쪽의 텔레그램, 메일 보내는 아이콘 위치하는 프레임
         self.funcFrame = Frame(self.window, width=95, height=frameHeight - 50, bg='light cyan')
         self.funcFrame.place(x=855, y=100)
+        MailFrame(self.funcFrame)
 
         self.window.mainloop()
         pass
