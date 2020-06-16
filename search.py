@@ -53,9 +53,17 @@ class SearchFrame:
         #sample
         notebook = tkinter.ttk.Notebook(frame, width=50, height=20)
 
+        #북마크 화살표 이미지
+        self.leftArrow = PhotoImage(file="left_arrow.png")
+        self.rightArrow = PhotoImage(file="right_arrow.png")
 
         #북마크 라벨
         Label(frame, text='북마크', font=self.Labelfont, bg='light green').place(x=450, y=160)
+
+        # 북마크 버튼
+        Button(frame, width=40, height=65, image=self.leftArrow).place(x=387, y=400)
+        Button(frame, width=40, height=65, image=self.rightArrow).place(x=387, y=300)
+
 
         #북마크 리스트 박스
         self.bookmarkListBox = Listbox(frame, selectmode='extended', width=50, height=20)
