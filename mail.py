@@ -3,13 +3,15 @@ from tkinter.font import *
 import tkinter.ttk
 import smtplib
 from email.mime.text import MIMEText
+from search import *
 
 WIDTH = 480
 HEIGHT = 160
 
 
 class MailFrame:
-    def __init__(self, frame):
+    def __init__(self, frame, sf):
+        self.SearchFrame = sf
         self.Labelfont = Font(family='italic', weight='bold', slant='roman', size=20)
         mailLabel = Label(frame, text='MAIL', font=self.Labelfont, bg='light cyan')
         mailLabel.place(x=13, y=50)
@@ -54,8 +56,15 @@ class MailFrame:
 
     def send(self):
         mailId = self.mailEntry.get()
-        msg = MIMEText('학원/교습소 정보')
-        msg['Subject'] = '정보를 입력하세요'
+        message = ''
+        for i in range(self.SearchFrame.bookmarkListBox.size()):
+            message = message + '\n' + self.SearchFrame.bookmarkListBox.get(i)
+        msg = MIMEText(message)
+
+
+        msg['Subject'] = '학원/교습소 위치'
+
+        self.SearchFrame.getBookMark()
 
         self.Gmail.sendmail("jaewon990905@gmail.com", mailId, msg.as_string())
         self.mailWindow.destroy()

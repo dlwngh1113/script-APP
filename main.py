@@ -26,7 +26,8 @@ class MainGUI:
         # 왼쪽의 학원 교습소 위치 검색 프레임
         self.searchFrame = Frame(self.window, width=WIDTH, height=frameHeight, bg='light green')
         self.searchFrame.place(x=0, y=60)
-        SearchFrame(self.searchFrame)
+
+        sf = SearchFrame(self.searchFrame)
 
         # 중간의 지도 보여주는 프레임
         self.mapFrame = Frame(self.window, width=WIDTH / 2 - 60, height=80, bg='light green')
@@ -36,7 +37,7 @@ class MainGUI:
         # 오른쪽의 텔레그램, 메일 보내는 아이콘 위치하는 프레임
         self.funcFrame = Frame(self.window, width=95, height=frameHeight - 50, bg='light cyan')
         self.funcFrame.place(x=855, y=100)
-        MailFrame(self.funcFrame)
+        MailFrame(self.funcFrame, sf)
         TelegramFrame(self.funcFrame)
 
         self.window.mainloop()
