@@ -3,6 +3,9 @@ from tkinter.font import *
 import tkinter.ttk
 import telepot
 
+BotID = '1135207639:AAFLPlKeeWRMvAHv95tWfJjl_9cetDkV9FY'
+UserID = '1062661278'
+
 
 class TelegramFrame:
     def __init__(self, frame):
