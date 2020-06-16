@@ -58,7 +58,7 @@ class MailFrame:
         msg['Subject'] = '정보를 입력하세요'
 
         self.Gmail.sendmail("jaewon990905@gmail.com", mailId, msg.as_string())
-        self.Gmail.quit()
+        #self.Gmail.quit()
         self.mailWindow.destroy()
 
 

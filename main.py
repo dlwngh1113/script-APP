@@ -4,6 +4,7 @@ from tkinter.ttk import *
 from search import *
 from map import *
 from mail import *
+from telegram import *
 
 frameHeight = 580
 WIDTH = 960
@@ -36,6 +37,7 @@ class MainGUI:
         self.funcFrame = Frame(self.window, width=95, height=frameHeight - 50, bg='light cyan')
         self.funcFrame.place(x=855, y=100)
         MailFrame(self.funcFrame)
+        TelegramFrame(self.funcFrame)
 
         self.window.mainloop()
         pass
