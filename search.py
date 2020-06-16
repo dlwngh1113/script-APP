@@ -61,13 +61,27 @@ class SearchFrame:
         Label(frame, text='북마크', font=self.Labelfont, bg='light green').place(x=450, y=160)
 
         # 북마크 버튼
-        Button(frame, width=40, height=65, image=self.leftArrow).place(x=387, y=400)
-        Button(frame, width=40, height=65, image=self.rightArrow).place(x=387, y=300)
-
+        Button(frame, width=40, height=65, image=self.leftArrow, command=self.moveToList).place(x=387, y=400)
+        Button(frame, width=40, height=65, image=self.rightArrow, command=self.moveToBook).place(x=387, y=300)
 
         #북마크 리스트 박스
         self.bookmarkListBox = Listbox(frame, selectmode='extended', width=50, height=20)
         self.bookmarkListBox.place(x=450, y=230)
+
+    def moveToBook(self):
+        print("북마크")
+        selection = self.academyListBox.curselection()
+
+        for i in range(len(selection)):
+            self.bookmarkListBox.insert(i, self.academyListBox.get(selection[i]))
+        pass
+
+    def moveToList(self):
+        print("리스트")
+        selection = self.bookmarkListBox.curselection()
+
+        self.bookmarkListBox.delete(selection[0], selection[len(selection)-1])
+        pass
 
     def search(self):
         self.academyListBox.delete(0, self.academyListBox.size())
