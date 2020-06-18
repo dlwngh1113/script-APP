@@ -1,3 +1,4 @@
+from teller import *
 from tkinter import *
 from tkinter.font import *
 import tkinter.ttk
@@ -17,8 +18,9 @@ class TelegramFrame:
         self.initButton(frame)
 
     def initButton(self, frame):
-        self.telegramButton = Button(frame, width=70, height=70, image=self.image, command=self.initWindow)
+        self.telegramButton = Button(frame, width=70, height=70, image=self.image, command=self.startTelegram)
         self.telegramButton.place(x=10, y=300)
 
-    def initWindow(self):
+    def startTelegram(self):
+        start()
         pass
